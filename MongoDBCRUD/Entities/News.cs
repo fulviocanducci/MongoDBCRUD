@@ -1,13 +1,14 @@
-﻿using MongoDB.Bson;
+﻿using System;
+using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
-using System;
 
 namespace MongoDBCRUD.Entities
-{    
+{   
     public class News
     {
         public News()
         {
+            
         }
 
         [BsonId()]
@@ -28,5 +29,13 @@ namespace MongoDBCRUD.Entities
         [BsonElement("active")]
         [BsonRequired()]
         public bool Active { get; set; }
+
+        [BsonElement("value")]
+        [BsonRequired()]
+        public double Value { get; set; }
+
+        [BsonElement("position")]
+        [BsonRequired()]
+        public int Position { get; set; }
     }
 }
