@@ -18,14 +18,14 @@ namespace MongoDBCRUD
             IMongoCollection<News> colNews = database.GetCollection<News>("news");
 
             #region NewDocument
-            //Nova coleção
-            //News doc = new News();
-            //doc.Title = "Titulo";
-            //doc.Body = "Texto";
-            //doc.Created = DateTime.Now;
-            //doc.Active = true;
+            Nova coleção
+            News doc = new News();
+            doc.Title = "Titulo";
+            doc.Body = "Texto";
+            doc.Created = DateTime.Now;
+            doc.Active = true;
 
-            //colNews.InsertOne(doc);
+            colNews.InsertOne(doc);
             #endregion NewDocument
 
             #region EditDocument
